@@ -1,11 +1,10 @@
 :root {
-    /* Paleta de Cores: Tons de Rosa */
-    --primary: #d81b60; /* Rosa escuro para destaque */
-    --primary-light: #f06292; /* Rosa médio */
+    --primary: #d81b60;
+    --primary-light: #f06292;
     --primary-hover: #ad1457;
     
-    --bg-color: #fff5f8; /* Rosinha claro para o fundo */
-    --text-main: #4a0e1e; /* Marrom rosado escuro para texto */
+    --bg-color: #fff5f8;
+    --text-main: #4a0e1e;
     --text-muted: #884d5e;
     --card-bg: rgba(255, 255, 255, 0.9);
     --shadow: 0 10px 25px -5px rgba(216, 27, 96, 0.1), 0 8px 10px -6px rgba(216, 27, 96, 0.05);
@@ -104,7 +103,7 @@ p {
 .card-icon {
     width: 52px;
     height: 52px;
-    background: #fce4ec; /* Fundo rosa suave */
+    background: #fce4ec;
     color: var(--primary);
     border-radius: 14px;
     display: flex;
