@@ -3,20 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tópicos Especiais | Dashboards</title>
     
-    <!-- LINHA PARA O FAVICON (ÍCONE DA ABA) -->
-    <!-- Se sua imagem for .ico: -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <title>Tópicos Especiais</title>
 </head>
 <body>
-    <h1>Clique aqui</h1>
-    <div class="button-container">
-        <a href="https://app.powerbi.com/links/cLVnAYnwAe?ctid=71efa34d-a921-4300-9d81-cc6ec9be17a4&pbi_source=linkShare" target="_blank">Clientes - Produtos - Vendas</a>
-        <a href="https://app.powerbi.com/links/ikJy4EK7-T?ctid=71efa34d-a921-4300-9d81-cc6ec9be17a4&pbi_source=linkShare" target="_blank">Vendas</a>
-        <a href="https://app.powerbi.com/links/sk0GPx4oas?ctid=71efa34d-a921-4300-9d81-cc6ec9be17a4&pbi_source=linkShare" target="_blank">Simulado ENEM</a>
-        <a href="https://app.powerbi.com/links/QErfARku1W?ctid=71efa34d-a921-4300-9d81-cc6ec9be17a4&pbi_source=linkShare" target="_blank">Boletim ou Histórico Escolar</a>
-    </div>
+    <main class="container">
+        <header class="header">
+            <div class="icon-box">
+                <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h1>Tópicos Especiais</h1>
+            <p>Selecione um dos relatórios abaixo para visualizar os dados detalhados.</p>
+        </header>
+
+        <div class="button-grid">
+            <a href="https://app.powerbi.com/links/cLVnAYnwAe?ctid=71efa34d-a921-4300-9d81-cc6ec9be17a4&pbi_source=linkShare" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-tags"></i></div>
+                <span>Clientes - Produtos - Vendas</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+            </a>
+
+            <a href="https://app.powerbi.com/links/ikJy4EK7-T?ctid=71efa34d-a921-4300-9d81-cc6ec9be17a4&pbi_source=linkShare" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <span>Vendas</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+            </a>
+
+            <a href="https://app.powerbi.com/links/sk0GPx4oas?ctid=71efa34d-a921-4300-9d81-cc6ec9be17a4&pbi_source=linkShare" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span>Simulado ENEM</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+            </a>
+
+            <a href="https://app.powerbi.com/links/QErfARku1W?ctid=71efa34d-a921-4300-9d81-cc6ec9be17a4&pbi_source=linkShare" target="_blank" class="card">
+                <div class="card-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                <span>Boletim ou Histórico Escolar</span>
+                <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 Relatórios da Juju</p>
+        </footer>
+    </main>
 </body>
 </html>
