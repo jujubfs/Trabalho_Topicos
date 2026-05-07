@@ -1,7 +1,9 @@
 :root {
+    /* Paleta de Cores: Tons de Rosa */
     --primary: #d81b60;
     --primary-light: #f06292;
     --primary-hover: #ad1457;
+    
     --bg-color: #fff5f8;
     --text-main: #4a0e1e;
     --text-muted: #884d5e;
@@ -21,95 +23,106 @@ body {
     color: var(--text-main);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 40px 20px;
     line-height: 1.5;
 }
 
-.container {
+/* Wrapper para colocar os containers lado a lado no PC */
+.main-wrapper {
+    display: flex;
+    gap: 30px;
     width: 100%;
-    max-width: 800px;
+    max-width: 1400px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container {
+    flex: 1;
     background: var(--card-bg);
     backdrop-filter: blur(12px);
-    padding: 40px;
+    padding: 40px 30px;
     border-radius: 24px;
     box-shadow: var(--shadow);
     border: 1px solid rgba(216, 27, 96, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .icon-box {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: white;
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    margin: 0 auto 20px;
+    font-size: 1.4rem;
+    margin: 0 auto 15px;
     box-shadow: 0 10px 15px -3px rgba(216, 27, 96, 0.3);
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: var(--primary);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     letter-spacing: -0.5px;
 }
 
 p {
     color: var(--text-muted);
-    font-size: 1.05rem;
+    font-size: 0.95rem;
 }
 
+/* GRID DE CARDS: DUAS COLUNAS DENTRO DE CADA CONTAINER */
 .button-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Aumentado o gap para acomodar cards maiores */
 }
 
 .card {
     background: white;
-    padding: 22px;
+    padding: 22px; /* Aumentado o padding interno */
     border-radius: 18px;
     text-decoration: none;
     color: var(--text-main);
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 18px; /* Aumentado o espaço entre ícone e texto */
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid #fce4ec;
-    position: relative;
-    text-align: left;
 }
 
 .card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
     border-color: var(--primary-light);
-    box-shadow: 0 20px 25px -5px rgba(216, 27, 96, 0.1);
+    box-shadow: 0 15px 20px -5px rgba(216, 27, 96, 0.1);
     background-color: #fff9fb;
 }
 
 .card-icon {
-    width: 52px;
-    height: 52px;
+    width: 52px; /* Aumentado de 40px para 52px */
+    height: 52px; /* Aumentado de 40px para 52px */
     background: #fce4ec;
     color: var(--primary);
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* Aumentado o tamanho do ícone */
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .card:hover .card-icon {
@@ -119,39 +132,58 @@ p {
 }
 
 .card span {
-    font-weight: 600;
-    font-size: 1.05rem;
+    font-weight: 700; /* Texto mais forte */
+    font-size: 1.05rem; /* Aumentado de 0.85rem para 1.05rem */
     flex: 1;
+    text-align: left;
+    line-height: 1.3;
 }
 
-.external-icon {
-    font-size: 0.85rem;
-    color: #f8bbd0;
-    transition: color 0.3s ease;
-}
-
-.card:hover .external-icon {
-    color: var(--primary);
-}
-
-.footer {
-    border-top: 1px solid #fce4ec;
-    padding-top: 25px;
+.global-footer {
+    margin-top: 40px;
     font-size: 0.9rem;
     color: var(--text-muted);
     font-weight: 500;
 }
 
-@media (max-width: 640px) {
-    .container {
-        padding: 30px 20px;
-    }
-    
-    h1 {
-        font-size: 1.75rem;
-    }
-    
+/* Responsividade */
+@media (max-width: 1200px) {
     .button-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 850px) {
+    .main-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container {
+        width: 100%;
+    }
+
+    .button-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        padding: 18px;
+    }
+    
+    .card-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.1rem;
+    }
+    
+    .card span {
+        font-size: 0.95rem;
     }
 }
